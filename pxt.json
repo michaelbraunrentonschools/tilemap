@@ -1,0 +1,21 @@
+{
+    "name": "tilemap",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "color-coded-tilemap": "*",
+        "color": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "main.blocks"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj"
+}

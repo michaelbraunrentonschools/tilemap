@@ -1,0 +1,64 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="k[Ih43!LW)/JwTKqy]z[">nextLevel</variable><variable id="meUV-sBO:uU*huZD}dfX">levels</variable><variable id="6!|zM0.}!l#d`)v|j_kj">value</variable><variable id="}1L6+zavU2.z?T``=p?B">player1</variable><variable type="KIND_SpriteKind" id=";-?/t13Z,!uODPWuZSn5">Player</variable><variable type="KIND_SpriteKind" id="6-Ec)3bP[/]*qa)*6uH5">Projectile</variable><variable type="KIND_SpriteKind" id="kd#ULZ$z3KWi$AlMQ0@I">Food</variable><variable type="KIND_SpriteKind" id="|_/(C(Dm)`8{l)-cI?s:">Enemy</variable><variable type="BLOCKLY_TILESET_TYPE" id="k=m+R!.RU$7rJHQ+p1S[">0;16;16;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</variable></variables><block type="pxt-on-start" id="-Hziy7?R0d[-Jlmh6/R6" x="10" y="-10"><comment>Add Extension: Color Coded Tilemap</comment><statement name="HANDLER"><block type="variables_set" id="MonbtOx+ZzdQrn[#dX]k"><field name="VAR" id="meUV-sBO:uU*huZD}dfX">levels</field><comment>Storing Levels in an array List</comment><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="lists_create_with" id="}rAgF^MT`PSxg@UOS!P%"><mutation items="3"/><value name="ADD0"><block type="screen_image_picker" id="FJrwFI5bwgyE[T*jE.Uy"><field name="img">img`
+f f f f f f f f f f 
+f f f f f f f f f f 
+f f f f f f f f f f 
+f 4 f f f f f f 7 f 
+f f f f f f f f f f 
+f f f f f f f f f f 
+f f f f f f f f f f 
+f f f f f f f f f f 
+`</field></block></value><value name="ADD1"><block type="screen_image_picker" id="HB[WKi}G,O9LB|jAAXWm"><field name="img">img`
+9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 
+9 4 9 9 9 9 9 9 7 9 
+9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 
+`</field></block></value><value name="ADD2"><block type="screen_image_picker" id="SM{^BV:Js?BWkS9aH}`M"><field name="img">img`
+3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 
+3 4 3 3 3 3 3 3 7 3 
+3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 
+`</field></block></value></block></value><next><block type="gamesettile" id="#)@JY*/N+gw`=E4Ns4tl"><comment>It makes green block look like a face and creates a wall</comment><value name="index"><shadow type="colorindexpicker" id="KXkBt$UC]nCb]ck{u/WI"><field name="index">7</field></shadow></value><value name="img"><shadow type="tile_image_picker" id=")Cl9zjEiM_%E4gjQ^OgD"><field name="img">img`
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 f 7 7 7 7 f 7 7 7 7 7 7 
+7 7 7 7 f 7 7 7 7 f 7 7 7 7 7 7 
+7 7 7 7 f 7 7 7 7 f 7 7 7 7 7 7 
+7 7 7 7 f 7 7 7 7 f 7 7 7 7 7 7 
+7 7 7 7 f 7 7 7 7 f 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 f 7 7 7 7 7 7 7 7 f f 7 7 7 
+7 7 7 f f 7 7 7 7 7 7 f 7 7 7 7 
+7 7 7 7 f f 7 7 7 7 f f 7 7 7 7 
+7 7 7 7 7 f f f f f f 7 7 7 7 7 
+7 7 7 7 7 7 7 f f 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+`</field></shadow></value><value name="wall"><shadow type="toggleOnOff" id="}sxV}W:?B?pfBPV6*6I|"><field name="on">true</field></shadow></value><next><block type="variables_set" id="Y!BJ^_2A(W[Q6wy/-/(D"><field name="VAR" id="k[Ih43!LW)/JwTKqy]z[">nextLevel</field><comment>It starts a number for next level</comment><value name="VALUE"><shadow type="math_number" id="uOe+uwY/mLOo@AxpRjKu"><field name="NUM">0</field></shadow></value><next><block type="variables_set" id="]MUw3TtTSSc-}:D:l[=g"><field name="VAR" id="}1L6+zavU2.z?T``=p?B">player1</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="CZ.zrTB7.*J%2T3wKCNY"><value name="img"><shadow type="screen_image_picker" id="gyi[.c]wNE3|Lg`oaS6#"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . 2 2 2 2 2 . . . . . . . . 
+. . 2 2 . . . 2 2 . . . . . . . 
+. . 2 . 7 . 7 . 2 . . . . . . . 
+. . 2 2 . . . 2 2 . . . . . . . 
+. . . 2 2 2 2 2 . . . . . . . . 
+. . . . . 2 . . . . . . . . . . 
+. . . . . 2 . . . . . . . . . . 
+. . . 2 2 2 2 2 . . . . . . . . 
+. . . . . 2 . . . . . . . . . . 
+. . . . . 2 . . . . . . . . . . 
+. . . . 2 2 2 . . . . . . . . . 
+. . . 2 2 . 2 2 . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="^6I6^}-i=5TPkf#;H.U|"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="cs.-,SIjc4(][i/s$um."><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><shadow type="variables_get" id="Nl|urPM}M`Zp8K~N9r9o"><field name="VAR" id="}1L6+zavU2.z?T``=p?B">player1</field></shadow></value><value name="vx"><shadow type="math_number" id="R3DVP$7h$b%TofKCwF%D"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number" id="FA?bvq[KpC9RtaquBM$]"><field name="NUM">100</field></shadow></value><next><block type="function_call" id="Firqh0}+6vy7-l0`=h/C"><mutation name="buildLevel" functionid="~Z|y1bXVj1v,]y|WE7V*"/></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="function_definition" id=":Pkoko`9S|eft!|xhRX$" x="550" y="290"><mutation name="buildLevel" functionid="~Z|y1bXVj1v,]y|WE7V*"/><field name="function_name">buildLevel</field><statement name="STACK"><block type="controls_if" id="CK9fg7{%5+dGES3=j9Bb"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="L|70,]f+`c0#M|8Ch0l6"><field name="OP">EQ</field><comment>If next level equals length of array length, then YOU WIN
+
+Array length is 2: 0, 1, 2</comment><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="nT?a(F~,`-kpk_YYtY1,"><field name="VAR" id="k[Ih43!LW)/JwTKqy]z[">nextLevel</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="lists_length" id="h!7*Yua8{KZ?1]M{JgRo"><value name="VALUE"><block type="variables_get" id="k,FEFF^LVg#^?/8VY1s$"><field name="VAR" id="meUV-sBO:uU*huZD}dfX">levels</field></block></value></block></value></block></value><statement name="DO0"><block type="gameOver" id="sNJzu|nn6{Ln,|h|/4UK"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="win"><shadow type="toggleWinLose" id=";Ly{D#R-,bVkIKy}46fg"><field name="win">true</field></shadow></value></block></statement><next><block type="gamesettilemap" id="_@#Ux2I6CBVq7[+]QVV?"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="map"><shadow type="tilemap_image_picker"/><block type="lists_index_get" id="x.q:gAgE@$^?sj^xx}Ot"><value name="LIST"><block type="variables_get" id="ZvA#ZvXmnqDW7tssyXZ:"><field name="VAR" id="meUV-sBO:uU*huZD}dfX">levels</field></block></value><value name="INDEX"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="6@nVIxB^/DqF=R}E:O%h"><field name="VAR" id="k[Ih43!LW)/JwTKqy]z[">nextLevel</field></block></value></block></value><next><block type="pxt_controls_for_of" id=";;WIKqj6T|60SyPCbYp["><comment>Places the player sprite at a certain position when touching ORANGE tile</comment><value name="VAR"><shadow type="variables_get_reporter" id="6La}p^_8Z7BBEc~UTG.p"><field name="VAR" id="6!|zM0.}!l#d`)v|j_kj">value</field></shadow></value><value name="LIST"><block type="gamegettilestype" id="eUsf6O(**4;[e|@gTB+z"><value name="index"><shadow type="colorindexpicker" id="Dx3VKQ!89.r?!)Q=/~!?"><field name="index">4</field></shadow></value></block></value><statement name="DO"><block type="gameplaceontile" id="W!zW`G%sFUd0X;C64S:m"><value name="tile"><block type="variables_get" id="^yt+h{wg.^aH(;br6vLd"><field name="VAR" id="6!|zM0.}!l#d`)v|j_kj">value</field></block></value><value name="sprite"><shadow type="variables_get" id="[M$US145c:3n6q%%|Nm5"><field name="VAR" id="}1L6+zavU2.z?T``=p?B">player1</field></shadow></value></block></statement><next><block type="variables_change" id="2o.@I.wPGjxH/@}4iKs$"><field name="VAR" id="k[Ih43!LW)/JwTKqy]z[">nextLevel</field><comment>Changes the tileMap to the next level in the array of maps....</comment><value name="VALUE"><shadow type="math_number" id="EQVs=I/2n:ZeS;PM*,mE"><field name="NUM">1</field></shadow></value></block></next></block></next></block></next></block></statement></block><block type="spritesollisions" id="CPJFAZ0i%jh]PK.(Wx%l" x="10" y="410"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom" id="^CKt({s;fNW1dSJ)SA),"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind" id="i0Ji4a^;e?safVPgITL6"><field name="MEMBER">Player</field></shadow></value><value name="tile"><shadow type="colorindexpicker" id="_{LVi=v7RXsgz:_^|gP."><field name="index">7</field></shadow></value><statement name="HANDLER"><block type="function_call" id="~!Ek-V5_2c4:p*.JdNO{"><mutation name="buildLevel" functionid="~Z|y1bXVj1v,]y|WE7V*"/></block></statement></block></xml>
